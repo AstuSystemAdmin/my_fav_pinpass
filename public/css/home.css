@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 100px;
+}
+.my_nav{
+    min-height: 80px;
+    background-color: #19A7CE;
+    color: #fff;
+}
+.all_creds{
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card
+{
+    width: 500px;
+    background-color: #19A7CE;
+}
+.my_card
+{
+    background-color: #19A7CE;
+}
+button.delete
+{
+    margin-top: 10px;
+    height: 30px;
+    width: 70px;
+    background-color: #fff;
+    color: teal;
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+}
+button.delete:hover
+{
+    background-color: #EB455F;
+    color: #fff;
+}
+
+@media (max-width: 560px){
+    .card
+    {
+        width: 300px;
+        background-color: #19A7CE;
+    }  
+}

@@ -1,0 +1,108 @@
+.hide {
+    display: none !important;
+}
+
+
+button:disabled {color:#bdbdbd;}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: gray;
+   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    
+}
+
+.button5 {
+    background-color: #e5e5e5;
+    color: black;
+    
+}
+
+.buttonr {
+    background-color: white;
+    color: black;
+    
+}
+.buttonr:hover {
+    background-color: white;
+    color: gray;
+}
+
+.button5:hover {
+    background-color: #cecece;
+    color: white;
+}
+
+.submit_b {
+	border:none; 
+	background:transparent; 
+	font-size:22px; 
+	color:#008ae6; 
+	font-weight:500; 
+	outline:none; cursor: 
+	pointer; 
+	z-index:9999
+	
+}
+
+.spinner_2 {
+	position: relative;
+	top: 14px;
+	left: 50%;
+	z-index: 99;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.w3-animate-zoom {animation:animatezoom 0.3s}@keyframes animatezoom{from{transform:scale(1.1)} to{transform:scale(1)}}
+
+
+/* Modal Content */
+.modal-content {
+    
+    background-color: #fefefe;
+    margin: auto;
+   
+    border: 1px solid #888;
+    width: 290px;
+    border-radius: 16px;
+}
+
+/* The Close Button */
+.close {
+    color: green;
+    float: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+}

